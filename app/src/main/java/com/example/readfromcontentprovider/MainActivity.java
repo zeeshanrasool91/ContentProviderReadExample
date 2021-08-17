@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         final String URL = "content://" + PROVIDER_NAME + "/users";
         final Uri CONTENT_URI = Uri.parse(URL);
         ContentValues values = new ContentValues();
-        values.put("name", "ZEESHAN RASOOL");
+        values.put("name", name);
         getContentResolver().insert(CONTENT_URI, values);
         Toast.makeText(getBaseContext(), "New Record Inserted", Toast.LENGTH_LONG).show();
         onClickShowDetails(binding.btnRetrieve);
